@@ -1,6 +1,7 @@
 // components/Layout.js
 import Navbar from '@/components/Navbar';
 import { useEffect, useState } from 'react';
+import Social from './Social';
 
 export default function Layout({ children }) {
   const [isDarkMode, setIsDarkMode] = useState(false);
