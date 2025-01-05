@@ -58,3 +58,26 @@ html {
     transform: scale(1);
   }
 }
+
+.circle {
+  height: 24px;
+  width: 24px;
+  border-radius: 24px;
+  background-color: rgb(108, 220, 164);
+  position: fixed; 
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999999;
+}
+
+.mask {
+  mask-image: url('/mask.svg');
+  mask-repeat: no-repeat;
+  mask-size: 40px;
+  background: #ec4e39;
+  position: absolute;
+  color: black;
+  pointer-events: none;
+  z-index: 999;
+}
