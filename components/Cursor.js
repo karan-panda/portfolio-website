@@ -47,7 +47,7 @@ const Cursor = () => {
   }, [coords]);
 
   return (
-    <>
+    <div className="cursor-container">
       <div className="circle"></div>
       <div className="circle"></div>
       <div className="circle"></div>
@@ -64,7 +64,7 @@ const Cursor = () => {
       <div className="circle"></div>
       <div className="circle"></div>
       <div className="circle"></div>
-    </>
+    </div>
   );
 };
 
