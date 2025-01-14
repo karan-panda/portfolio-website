@@ -1,0 +1,26 @@
+/* Keyframes for rotating the circle text */
+@keyframes rotateCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Apply animation to SVG */
+.animate-rotate-circle {
+  animation: rotateCircle 10s linear infinite;
+  transform-origin: center;
+}
+
+
+
+.fill-circle {
+  background: radial-gradient(
+    circle,
+    #ecc067 10%,
+    #fa8601 80%
+  ); 
+}
+

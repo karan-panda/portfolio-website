@@ -1,0 +1,36 @@
+/* components/SlidingMarquee.module.css */
+.marqueeContainer {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    position: relative;
+    background-color: #ecc8c8;
+    padding: 20px 0;
+  }
+  
+  .marquee {
+    display: flex;
+    gap: 20px;
+    animation: scroll 10s linear infinite;
+  }
+  
+  .marqueeItem {
+    font-size: 1.2rem;
+    color: #d4e157; /* Adjust color based on your theme */
+    background-color: #292929;
+    padding: 10px 20px;
+    border-radius: 5px;
+    white-space: nowrap;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  @keyframes scroll {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  

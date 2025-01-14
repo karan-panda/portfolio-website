@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import '@/styles/globals.css';
 import Layout from '@/components/Layout';
+// import { StarBackground } from '@/components/StarBackground';
 
 export default function App({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
@@ -33,13 +34,16 @@ export default function App({ Component, pageProps }) {
   }, [router]);
 
   return (
-    <Layout>
-      {loading && (
-        <div className="loader">
-          <img src="/K.svg" alt="Loading" />
-        </div>
-      )}
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      {/* <StarBackground /> */}
+      <Layout>
+        {loading && (
+          <div className="loader">
+            <img src="/K.svg" alt="Loading" />
+          </div>
+        )}
+        <Component {...pageProps} />
+      </Layout>
+    </>
   );
 }
