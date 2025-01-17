@@ -14,15 +14,11 @@ const SlidingMarquee = () => {
 
   return (
     <div className={styles.marqueeContainer}>
-      {/* <div className={styles.marquee}>
-        {items.map((item, index) => (
-          <div className={styles.marqueeItem} key={index}>
-            {item}
-          </div>
-        ))}
-      </div> */}
-      <GetInTouch />
-      
+      <div className={styles.marquee}>
+      <div className={styles.innerComponent}>
+        <GetInTouch />
+      </div>
+      </div>
     </div>
   );
 };
