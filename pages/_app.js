@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import '@/styles/globals.css';
 import Layout from '@/components/Layout';
+import Cursor from '@/components/Cursor';
 // import { StarBackground } from '@/components/StarBackground';
 
 export default function App({ Component, pageProps }) {
@@ -36,6 +37,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       {/* <StarBackground /> */}
+      <Cursor />
       <Layout>
         {loading && (
           <div className="loader">

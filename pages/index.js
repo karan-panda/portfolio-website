@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import Cursor from '@/components/Cursor'
 import SlidingMarquee from '@/components/SlidingMarquee'
 import { TypeAnimation } from 'react-type-animation'
@@ -8,7 +9,6 @@ import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons'
 export default function Home () {
   return (
     <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
-      <Cursor />
       <h1 className='text-3xl font-bold text-center mt-10'>Home</h1>
 
       <div className='flex flex-col lg:flex-row justify-between items-center mt-10'>
@@ -65,15 +65,43 @@ export default function Home () {
               <span className='absolute top-1/2 right-[-1rem] transform -translate-y-1/2 group-hover:right-[-1.5rem] transition-all duration-300'></span>
             </a>
           </div>
-
         </div>
 
         {/* Right Section */}
-        <div className='hidden lg:flex justify-start'>
+        <div className='relative hidden lg:flex justify-center items-center w-[300px] h-[300px]'>
+          {/* Animated Circle */}
+          <motion.svg
+            xmlns='http://www.w3.org/2000/svg'
+            viewBox='0 0 506 506'
+            className='absolute w-full h-full'
+          >
+            <motion.circle
+              cx='253'
+              cy='253'
+              r='250'
+              stroke='#f45926'
+              strokeWidth='6'
+              fill='none'
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              initial={{ strokeDasharray: '24 10 0 0' }}
+              animate={{
+                strokeDasharray: ['15 120 25 25', '16 25 92 72', '4 250 22 22'],
+                rotate: [120, 360],
+              }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                repeatType: 'reverse',
+              }}
+            />
+          </motion.svg>
+
+          {/* Image */}
           <img
             src='/myImage.jpg'
             alt='Karan Panda'
-            className='h-72 rounded-full'
+            className='h-72 rounded-full relative z-10'
           />
         </div>
       </div>
