@@ -6,6 +6,15 @@ export default function About() {
         Fueling Innovation🚀, Engineering a Brighter Future for Humanity🌏!
       </p>
       <div className="lg:flex lg:justify-between lg:items-center mt-8">
+        {/* Right Section */}
+        <div className="lg:w-1/2 flex justify-center items-center">
+          <img
+            src="/coder.svg"
+            alt="Innovative Journey"
+            className="rounded-lg shadow-lg w-full"
+          />
+        </div>
+
         {/* Left Section */}
         <div className="lg:w-1/2 lg:pr-8">
           <p className="text-lg leading-relaxed">
@@ -62,14 +71,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* Right Section */}
-        <div className="lg:w-1/2 flex justify-center items-center">
-          <img
-            src="/coder.svg"
-            alt="Innovative Journey"
-            className="rounded-lg shadow-lg w-full"
-          />
-        </div>
       </div>
     </div>
   );
